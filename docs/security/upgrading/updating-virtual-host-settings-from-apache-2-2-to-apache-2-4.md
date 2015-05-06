@@ -65,6 +65,9 @@ Follow these instructions at any time to update your virtual host configuration 
 5.  Reload Apache:
 
         service apache2 reload
+        
+Note: Sometimes after disabling the old "example.com" site the symbolic link remains in /etc/apache2/sites-enabled/.  To remove the symbolic link:
+	rm /etc/apache2/sites-enabled/example.com
 
 Your sites have now been added to Apache. Now follow the instructions in the next section to make your sites available.
 
@@ -161,7 +164,7 @@ Different distributions make Apache 2.4 the norm at different times. When you up
 |:--------------|:------------|: -----------------
 |Ubuntu         | 13.10       | out
 |Ubuntu         | 14.04 LTS   | April 17, 2014
-|Debian         | 8.0         | late 2015 ?
+|Debian         | 8.0         | April 25, 2015
 |CentOS         | ?           | ?
 |Fedora         | 19          | out
 |Fedora         | 20          | out
